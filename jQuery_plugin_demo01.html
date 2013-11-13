@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title>Demo</title>
+	<script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+
+</head>
+<body>
+	<input type="checkbox" value="A" />
+	<input type="checkbox" value="B" />
+	<input type="checkbox" value="C" />
+	<input type="checkbox" value="D" />
+</body>
+	<script type="text/javascript">
+		jQuery.fn.extend({
+			check:function(){
+				return this.each(function(){this.checked=true;});
+			},
+			uncheck:function(){
+				return this.each(function(){this.checked=false;});
+			}
+		});
+
+		$("input[type=checkbox]").check();
+	</script>
+</html>
